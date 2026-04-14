@@ -1,4 +1,4 @@
-import './Apresentacao.css'; // Importamos o CSS que acabamos de criar!
+import './Apresentacao.css'; 
 import fotoCasimiro from './Imagens/Casimiro.png';
 import logoITA from './Imagens/LogoITA.png';
 import imagemTerra from './imagens/Terra.png';
