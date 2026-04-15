@@ -92,3 +92,10 @@
   0%, 85%, 100% { opacity: 0; }  /* Fica invisível a maior parte do tempo */
   90%, 95% { opacity: 1; }       /* Dá o "flash" branco rapidamente */
 }
+
+/* Trilha da Inscrição */ 
+
+#trilha-secao {
+  padding: 200px;
+  border: 2px solid #FFCC00;
+}

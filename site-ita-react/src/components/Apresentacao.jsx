@@ -4,6 +4,19 @@ import logoITA from './Imagens/LogoITA.png';
 import imagemTerra from './imagens/Terra.png';
 import foguete from './imagens/Foguete.png';
 
+
+ function RolagemInscricao() {
+  const rolarInscricao = () => {
+    const secao = document.getElementById('trilha-secao');
+
+    if(secao) {
+      secao.scrollIntoView({behavior: 'smooth'});
+    }
+  };
+
+  return (<button onClick={rolarInscricao} className="btn-inscrevase">INSCREVA-SE</button>)
+}
+
 function Apresentacao() {
   return (
     <section className="hero-container">
@@ -52,8 +65,8 @@ function Apresentacao() {
         <div className="coluna-dir">
           <div className="painel-vestibular">
             <h1 className="titulo-vestibular">VESTIBULAR 2027</h1>
-    
-            <button className="btn-inscrevase">INSCREVA-SE</button>
+
+            <RolagemInscricao/>
 
             <nav className="menu-missao">
               <a href="#provas" className="item-menu">Provas Anteriores</a>
