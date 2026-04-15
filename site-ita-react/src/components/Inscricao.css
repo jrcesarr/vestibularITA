@@ -1,13 +1,15 @@
 .insc_container {
   position: relative;
   width: 100%;
-  min-height: 100vh; 
+  min-height: 100vh;
   background-color: #020611;
+    
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 60px 5%;
+  justify-content: flex-start; 
+  align-items: center; 
+    
+  padding: 100px 5% 50px 5%; 
   overflow: hidden;
 }
 
@@ -39,7 +41,7 @@
 
 .insc_titulo {
     align-self: flex-start; /* Move apenas este bloco para a esquerda */
-    margin-bottom: 400px;   
+    margin-bottom: 50px;   
     z-index: 1;
 }
 
@@ -64,4 +66,29 @@
     text-transform: uppercase;
     letter-spacing: 2px;
     margin-left: 20px; 
+}
+
+/* Animação Caixa */
+.glow-box {
+  position: absolute;
+  width: 50px; 
+  height: 50px; 
+  box-sizing: border-box; 
+  
+  
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5), inset 0 0 8px rgba(255, 255, 255, 0.3);
+  
+
+  opacity: 0; 
+  z-index: 0; 
+  pointer-events: none; 
+  
+
+  animation: flash-grid 5s infinite;
+}
+
+@keyframes flash-grid {
+  0%, 85%, 100% { opacity: 0; }  /* Fica invisível a maior parte do tempo */
+  90%, 95% { opacity: 1; }       /* Dá o "flash" branco rapidamente */
 }
