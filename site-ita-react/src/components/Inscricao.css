@@ -97,18 +97,18 @@
 
 #trilha-secao {
   padding: 50px;
-  border: 1px solid rgba(255, 204, 0, 0.4); /* Borda mais fina e tecnológica */
-  background-color: rgba(2, 6, 17, 0.8); /* Fundo sutil */
+  border: 1px solid rgba(255, 204, 0, 0.4); 
+  background-color: rgba(2, 6, 17, 0.8); 
   box-shadow: 0 0 20px rgba(255, 204, 0, 0.1), inset 0 0 20px rgba(255, 204, 0, 0.05);
   border-radius: 12px;
   
   display: flex;
-  flex-direction: column; /* Coloca os passos em cima e o botão embaixo */
+  flex-direction: column; /* Diferencia os passos do botão */
   align-items: center;
-  gap: 50px; /* Espaço entre os passos e o botão */
+  gap: 50px; 
 }
 
-/* CAIXA QUE SEGURA OS PASSOS LADO A LADO */
+
 .trilha-passos {
   display: flex;
   flex-direction: row;
@@ -118,7 +118,7 @@
   width: 100%;
 }
 
-/* ESTILO DE CADA PASSO */
+
 .passo {
   display: flex;
   flex-direction: column;
@@ -127,7 +127,7 @@
   font-family: 'Rajdhani', sans-serif;
 }
 
-/* CABEÇALHO DO PASSO (Número + Título) */
+
 .passo-header {
   display: flex;
   align-items: center;
@@ -143,11 +143,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 50%; /* Faz virar um círculo perfeito */
+  border-radius: 50%; 
   font-weight: 700;
   font-size: 1.2rem;
-  box-shadow: 0 0 10px rgba(255, 204, 0, 0.6); /* Círculo brilhante */
-  flex-shrink: 0; /* Impede o círculo de amassar */
+  box-shadow: 0 0 10px rgba(255, 204, 0, 0.6); 
+  flex-shrink: 0; 
 }
 
 .passo-titulo {
@@ -160,12 +160,11 @@
 
 .passo p {
   font-size: 1rem;
-  color: rgba(255, 255, 255, 0.75); /* Branco levemente apagado */
+  color: rgba(255, 255, 255, 0.75);
   line-height: 1.5;
   margin: 0;
 }
 
-/* SETINHAS ENTRE OS PASSOS */
 .seta-fluxo {
   color: rgba(255, 204, 0, 0.5);
   font-size: 2rem;
@@ -175,7 +174,6 @@
   margin-right: 30px;
 }
 
-/* BOTÃO DE AÇÃO FINAL */
 .btn-iniciar-jornada {
   background-color: #FFCC00;
   color: #020611;
