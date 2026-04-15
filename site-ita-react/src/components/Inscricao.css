@@ -60,8 +60,8 @@
 
 .insc_titulo h3 {
     font-family: 'Rajdhani', sans-serif;
-    color: rgba(255, 255, 255, 0.5); 
-    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.952); 
+    font-size: 1.2rem;
     font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -96,6 +96,104 @@
 /* Trilha da Inscrição */ 
 
 #trilha-secao {
-  padding: 200px;
-  border: 2px solid #FFCC00;
+  padding: 50px;
+  border: 1px solid rgba(255, 204, 0, 0.4); /* Borda mais fina e tecnológica */
+  background-color: rgba(2, 6, 17, 0.8); /* Fundo sutil */
+  box-shadow: 0 0 20px rgba(255, 204, 0, 0.1), inset 0 0 20px rgba(255, 204, 0, 0.05);
+  border-radius: 12px;
+  
+  display: flex;
+  flex-direction: column; /* Coloca os passos em cima e o botão embaixo */
+  align-items: center;
+  gap: 50px; /* Espaço entre os passos e o botão */
+}
+
+/* CAIXA QUE SEGURA OS PASSOS LADO A LADO */
+.trilha-passos {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start; /* Alinha tudo pelo topo */
+  gap: 15px;
+  width: 100%;
+}
+
+/* ESTILO DE CADA PASSO */
+.passo {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  text-align: left; /* Texto alinhado à esquerda fica mais elegante aqui */
+  font-family: 'Rajdhani', sans-serif;
+}
+
+/* CABEÇALHO DO PASSO (Número + Título) */
+.passo-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.passo-numero {
+  background-color: #FFCC00;
+  color: #020611;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%; /* Faz virar um círculo perfeito */
+  font-weight: 700;
+  font-size: 1.2rem;
+  box-shadow: 0 0 10px rgba(255, 204, 0, 0.6); /* Círculo brilhante */
+  flex-shrink: 0; /* Impede o círculo de amassar */
+}
+
+.passo-titulo {
+  color: #FFCC00;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+.passo p {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.75); /* Branco levemente apagado */
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* SETINHAS ENTRE OS PASSOS */
+.seta-fluxo {
+  color: rgba(255, 204, 0, 0.5);
+  font-size: 2rem;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 700;
+  margin-top: 2px; /* Alinha a seta com o círculo amarelo */
+  margin-right: 30px;
+}
+
+/* BOTÃO DE AÇÃO FINAL */
+.btn-iniciar-jornada {
+  background-color: #FFCC00;
+  color: #020611;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: 15px 40px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  box-shadow: 0 0 15px rgba(255, 204, 0, 0.4);
+  transition: all 0.3s ease;
+}
+
+.btn-iniciar-jornada:hover {
+  background-color: #ffd633;
+  box-shadow: 0 0 25px rgba(255, 204, 0, 0.8);
+  transform: translateY(-2px);
 }
