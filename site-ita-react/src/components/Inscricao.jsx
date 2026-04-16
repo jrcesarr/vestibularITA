@@ -2,7 +2,7 @@ import './Inscricao.css';
 
 function Inscricao(){
  return (
-    <section className="insc_container">
+    <section id="insc-container" className="insc_container">
         {/* Grid Brilhante*/}
         {/* animationDelay para eles não piscarem todos ao mesmo tempo */}
         <div className="glow-box" style={{ top: '150px', right: '200px', animationDelay: '0s' }}></div>

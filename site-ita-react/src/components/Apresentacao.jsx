@@ -7,7 +7,7 @@ import foguete from './imagens/Foguete.png';
 
  function RolagemInscricao() {
   const rolarInscricao = () => {
-    const secao = document.getElementById('trilha-secao');
+    const secao = document.getElementById('insc-container');
 
     if(secao) {
       secao.scrollIntoView({behavior: 'smooth'});
