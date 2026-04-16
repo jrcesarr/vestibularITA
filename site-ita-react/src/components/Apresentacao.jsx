@@ -17,6 +17,18 @@ import foguete from './imagens/Foguete.png';
   return (<button onClick={rolarInscricao} className="btn-inscrevase">INSCREVA-SE</button>)
 }
 
+function RolagemMaterias() {
+  const rolarMaterias = (e) => {
+    const secao = document.getElementById('materias-container');
+    e.preventDefault();
+    if(secao) {
+      secao.scrollIntoView({behavior: 'smooth'});
+    }
+  };
+
+  return (<a href="#materias" onClick={rolarMaterias} className="item-menu">Programa de Matérias</a>)
+}
+
 function Apresentacao() {
   return (
     <section className="hero-container">
@@ -70,7 +82,7 @@ function Apresentacao() {
 
             <nav className="menu-missao">
               <a href="#provas" className="item-menu">Provas Anteriores</a>
-              <a href="#materias" className="item-menu">Programa de Matérias</a>
+              <RolagemMaterias/>
               <a href="#calendario" className="item-menu">Calendário</a>
               <a href="#editais" className="item-menu">Editais</a>
             </nav>
