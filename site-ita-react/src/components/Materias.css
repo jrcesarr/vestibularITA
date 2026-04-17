@@ -91,3 +91,130 @@
     padding-left: 15px;
     text-shadow: 0 0 15px rgba(79, 76, 67, 0.3);
 }
+
+/* Card de materias */ 
+
+/* Container que segura os 4 blocos */
+.materias_areas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 40px;
+}
+
+/* Estilo Geral do Card (Bloco Preto) */
+.materia_card {
+    background-color: #020611; 
+    padding: 30px;
+    border-radius: 4px; 
+    border: 1px solid rgba(255, 204, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+
+.materia_card:hover {
+    transform: translateY(-10px);
+    border-color: #FFCC00;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.card_header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.card_icon {
+    font-size: 1.5rem;
+}
+
+.materia_card h2 {
+    font-family: 'Rajdhani', sans-serif;
+    color: #FFCC00;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: 2px;
+}
+
+.materia_card p {
+    font-family: 'Rajdhani', sans-serif;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1rem;
+    line-height: 1.4;
+    margin-bottom: 30px;
+}
+
+/* Botão dentro do card */
+.btn_detalhes {
+    background-color: transparent;
+    border: 1px solid #FFCC00;
+    color: #FFCC00;
+    padding: 10px 20px;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
+}
+
+.btn_detalhes:hover {
+    background-color: #FFCC00;
+    color: #020611;
+}
+
+/* Modal ao clicar */
+
+/* Fundo escurecido atrás do modal */
+.modal_overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(5px); /* Efeito de vidro desfocado */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    animation: fadeIn 0.3s ease;
+}
+
+/* Caixa do conteúdo */
+.modal_conteudo {
+    background-color: #020611;
+    border: 2px solid #FFCC00;
+    width: 80%;
+    max-width: 800px;
+    max-height: 80vh;
+    padding: 40px;
+    position: relative;
+    color: white;
+    overflow-y: auto; /* Scroll caso o texto seja longo */
+}
+
+.btn_fechar {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: #FFCC00;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
