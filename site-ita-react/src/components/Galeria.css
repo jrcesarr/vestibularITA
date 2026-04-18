@@ -1,0 +1,82 @@
+.galeria_container {
+    padding: 80px 20px;
+    background-color: #010308; /* Um fundo ainda mais escuro para destacar as fotos */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Cabeçalho da Galeria */
+.galeria_header {
+    text-align: center;
+    max-width: 800px;
+    margin-bottom: 50px;
+}
+
+.galeria_titulo {
+    color: #FFCC00;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.galeria_subtitulo {
+    color: #A0AABF; /* Um cinza azulado para não brigar com o título */
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.linha_decorativa {
+    width: 60px;
+    height: 4px;
+    background-color: #FFCC00;
+    margin: 20px auto 0;
+    border-radius: 2px;
+}
+
+/* O Mosaico de Fotos (CSS Grid) */
+.galeria_grid {
+    display: grid;
+    /* Cria colunas que se adaptam, com no mínimo 250px de largura */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /* Esse é o espaço entre as fotos. Zere (0) se quiser que fiquem coladas igual a referência */
+    gap: 15px; 
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* Cada container de foto */
+.galeria_item {
+    position: relative;
+    overflow: hidden; /* Evita que o zoom vaze da caixa */
+    border-radius: 8px; /* Bordas levemente arredondadas */
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* A tag img dentro do container */
+.galeria_item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Faz a foto preencher o espaço sem distorcer */
+    display: block;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Efeito de Zoom Suave ao passar o mouse */
+.galeria_item:hover img {
+    transform: scale(1.08);
+}
+
+/* TRUQUE DE MESTRE: A FOTO DE DESTAQUE
+   Se a tela for grande o suficiente, a primeira foto vai ocupar o espaço de 2 linhas e 2 colunas!
+*/
+@media (min-width: 768px) {
+    .galeria_item.destaque {
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+}

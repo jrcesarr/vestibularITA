@@ -30,7 +30,7 @@ export default function Tela({ modalType, onClose }) {
         matematica: {
             titulo: "MATEMÁTICA 📐",
             topicos: [
-            "Conjuntos e Números Complexos (Forma de Moivre)",
+            "Conjuntos e Números Complexos (Fórmula de Moivre)",
             "Funções: Injetoras, Exponenciais, Logarítmicas e Modulares",
             "Polinômios e Equações Algébricas",
             "Combinatória, Probabilidade e Binômio de Newton",
