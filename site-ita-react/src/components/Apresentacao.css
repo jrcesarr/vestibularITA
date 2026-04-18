@@ -379,16 +379,16 @@
   }
 
   .coluna-meio {
-    flex: 2;
-    height: 100%;
+    flex: 1.5;
+    height: 100vh;      
     display: flex;
-    align-items: center;
-    justify-content: flex-end; 
     flex-direction: column;
+    justify-content: flex-end; 
+    align-items: center;
     position: relative;
-    max-width: 600px;
+    max-width: 700px;   
     margin: 0 auto;
-    width: auto;
+    padding-bottom: 0 !important; 
   }
 
   .logo-ita {
@@ -404,12 +404,15 @@
   }
 
   .img-casimiro {
-    max-width: 140%;
-    max-height: 100vh; 
-    height: auto;
-    width: auto;
+    height: 82vh;       /* Ele sempre ocupará 82% da altura da tela do monitor */
+    width: auto;        /* A largura se ajusta automaticamente para não distorcer */
+    
+    max-width: 160%;    /* Permite que ele "vaze" um pouco das laterais se necessário */
     object-fit: contain;
-    object-position: bottom; 
+    object-position: bottom; /* Alinha a base da foto com a base do container */
+    display: block;          /* Remove o espaço de respiro de texto embaixo */
+    margin-bottom: 0;
+    z-index: 2;
   }
 
   /* Volta a mostrar a legenda hud no PC */
