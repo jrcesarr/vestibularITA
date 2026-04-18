@@ -186,8 +186,13 @@
 
     .logo-JR {
         bottom: 30px;
-        right: 50%; /* Joga pro meio */
-        transform: translateX(50%); /* Centraliza  */
-        width: 100px; /* Diminui um pouquinho a logo */
+        right: 50%;
+        transform: translateX(50%);
+        width: 80px;          
+        height: 80px;           
+        border-radius: 50%;      
+        object-fit: cover;      
+        border: 2px solid #FFCC00; /* Um aro dourado para combinar com o ITA */
+        box-shadow: 0 0 15px rgba(255, 204, 0, 0.3);
     }
 }
