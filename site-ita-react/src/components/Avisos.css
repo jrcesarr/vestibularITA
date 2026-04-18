@@ -145,3 +145,14 @@
     z-index: 10;   
     object-fit: cover; 
 }
+
+@media (max-width: 1024px) {
+    .aviao-decorativo {
+        display: none; /* Some com os aviões em telas de até 1024px  */
+    }
+    
+    .painel-avisos {
+        width: 95%; /* Garante que o painel ocupe bem a tela no mobile */
+        padding: 30px 20px;
+    }
+}
