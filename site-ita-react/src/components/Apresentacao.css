@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@400;500;700&display=swap');
 
-/* =========================================
-   1. REGRAS GERAIS, VISUAL E ANIMAÇÕES
-   (Aplicado no Celular e no PC)
-========================================= */
 .hero-container {
   position: relative;
   width: 100%;
@@ -103,7 +99,7 @@
   }
 }
 
-/* O visual dos botões e textos precisa ser global para não perder a estilização */
+
 .titulo-vestibular {
   font-family: 'Orbitron', sans-serif;
   font-weight: 700;
@@ -244,11 +240,14 @@
 }
 
 /* =========================================
-   2. LAYOUT MOBILE (Celular)
+   2. LAYOUT MOBILE 
 ========================================= */
 .hero-container {
   flex-direction: column;
   align-items: center;
+  min-height: 100vh; 
+  height: auto; 
+  padding-bottom: 50px;
 }
 
 .conteudo-hero {
@@ -259,8 +258,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 40px 20px;
-  gap: 30px;
+  padding: 20px; 
+  gap: 15px;
 }
 
 /* Esconde elementos que poluem a tela pequena do celular */
@@ -331,7 +330,7 @@
 }
 
 /* =========================================
-   3. LAYOUT DESKTOP (Idêntico ao seu código original)
+   3. LAYOUT DESKTOP 
 ========================================= */
 @media (min-width: 1024px) {
   .hero-container {
