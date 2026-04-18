@@ -3,16 +3,13 @@
   width: 100%;
   min-height: 100vh;
   background-color: #020611;
-    
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; 
-  align-items: center; 
-    
-  padding: 100px 5% 50px 5%; 
+  justify-content: flex-start;
+  align-items: center;
+  padding: 100px 5% 50px 5%;
   overflow: hidden;
 }
-
 
 .insc_container::before {
   content: '';
@@ -21,118 +18,137 @@
   left: 0;
   width: 100%;
   height: 100%;
-  
-  background-image: 
-    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+  background-image: linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
   background-size: 50px 50px;
-  
   -webkit-mask-image: radial-gradient(circle at center, black 50%, transparent 100%);
   mask-image: radial-gradient(circle at center, black 50%, transparent 100%);
-  
-  z-index: 0; 
+  z-index: 0;
 }
 
 .insc_container > * {
-  /* Tudo vai ficar por cima do grid */
   position: relative;
-  z-index: 1; 
+  z-index: 1;
 }
 
+/* Títulos */
 .insc_titulo {
-    align-self: flex-start; /* Move apenas este bloco para a esquerda */
-    margin-bottom: 50px;   
-    z-index: 1;
-}
-
-.insc_titulo h1 {
-    font-family: 'Rajdhani', sans-serif;
-    color: #FFCC00; /* Dourado */
-    font-size: 2.8rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 4px;
-    margin-bottom: 5px;
-    border-left: 4px solid #FFCC00;
-    padding-left: 15px;
-    text-shadow: 0 0 15px rgba(255, 204, 0, 0.3);
+  align-self: flex-start;
+  margin-bottom: 50px;
+  z-index: 1;
 }
 
 .insc_titulo h3 {
-    font-family: 'Rajdhani', sans-serif;
-    color: rgba(255, 255, 255, 0.952); 
-    font-size: 1.2rem;
-    font-weight: 400;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-left: 20px; 
+  font-family: 'Rajdhani', sans-serif;
+  color: rgba(255, 255, 255, 0.952);
+  font-size: 1.2rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-left: 20px;
 }
 
-/* Animação Caixa */
+/* Animação Caixa Brilhante */
 .glow-box {
   position: absolute;
-  width: 50px; 
-  height: 50px; 
-  box-sizing: border-box; 
-  
-  
+  width: 50px;
+  height: 50px;
+  box-sizing: border-box;
   border: 1px solid rgba(255, 255, 255, 0.9);
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.5), inset 0 0 8px rgba(255, 255, 255, 0.3);
-  
-
-  opacity: 0; 
-  z-index: 0; 
-  pointer-events: none; 
-  
-
+  opacity: 0;
+  z-index: 0;
+  pointer-events: none;
   animation: flash-grid 5s infinite;
 }
 
 @keyframes flash-grid {
-  0%, 85%, 100% { opacity: 0; }  /* Fica invisível a maior parte do tempo */
-  90%, 95% { opacity: 1; }       /* Dá o "flash" branco rapidamente */
+  0%, 85%, 100% {
+    opacity: 0;
+  }
+  90%, 95% {
+    opacity: 1;
+  }
 }
 
-/* Trilha da Inscrição */ 
+/* Botão de Inscrição */
+.btn-iniciar-jornada {
+  background-color: #FFCC00;
+  color: #020611;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: 15px 40px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  box-shadow: 0 0 15px rgba(255, 204, 0, 0.4);
+  transition: all 0.3s ease;
+  width: 100%; /* Preenche a caixa no celular */
+  max-width: 400px;
+}
+
+.btn-iniciar-jornada:hover {
+  background-color: #ffd633;
+  box-shadow: 0 0 25px rgba(255, 204, 0, 0.8);
+  transform: translateY(-2px);
+}
+
+/* =========================================
+   2. LAYOUT MOBILE (Celular/Tablet)
+========================================= */
+.insc_titulo h1 {
+  font-family: 'Rajdhani', sans-serif;
+  color: #FFCC00;
+  font-size: 1.8rem; /* Título menor para caber na tela pequena */
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 5px;
+  border-left: 4px solid #FFCC00;
+  padding-left: 15px;
+  text-shadow: 0 0 15px rgba(255, 204, 0, 0.3);
+}
 
 #trilha-secao {
-  padding: 50px;
-  border: 1px solid rgba(255, 204, 0, 0.4); 
-  background-color: rgba(2, 6, 17, 0.8); 
+  padding: 30px 20px; /* Padding reduzido no celular */
+  border: 1px solid rgba(255, 204, 0, 0.4);
+  background-color: rgba(2, 6, 17, 0.8);
   box-shadow: 0 0 20px rgba(255, 204, 0, 0.1), inset 0 0 20px rgba(255, 204, 0, 0.05);
   border-radius: 12px;
-  
   display: flex;
-  flex-direction: column; /* Diferencia os passos do botão */
+  flex-direction: column;
   align-items: center;
-  gap: 50px; 
-}
-
-
-.trilha-passos {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start; /* Alinha tudo pelo topo */
-  gap: 15px;
+  gap: 30px;
   width: 100%;
 }
 
+/* Empilhamento Vertical dos passos no Celular */
+.trilha-passos {
+  display: flex;
+  flex-direction: column; /* Coloca os passos em coluna */
+  align-items: flex-start;
+  gap: 15px;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
 
 .passo {
   display: flex;
   flex-direction: column;
-  flex: 1;
-  text-align: left; /* Texto alinhado à esquerda fica mais elegante aqui */
+  width: 100%;
+  text-align: left;
   font-family: 'Rajdhani', sans-serif;
 }
-
 
 .passo-header {
   display: flex;
   align-items: center;
   gap: 15px;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .passo-numero {
@@ -143,11 +159,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 50%; 
+  border-radius: 50%;
   font-weight: 700;
   font-size: 1.2rem;
-  box-shadow: 0 0 10px rgba(255, 204, 0, 0.6); 
-  flex-shrink: 0; 
+  box-shadow: 0 0 10px rgba(255, 204, 0, 0.6);
+  flex-shrink: 0;
 }
 
 .passo-titulo {
@@ -170,28 +186,46 @@
   font-size: 2rem;
   font-family: 'Rajdhani', sans-serif;
   font-weight: 700;
-  margin-top: 2px; /* Alinha a seta com o círculo amarelo */
-  margin-right: 30px;
+  transform: rotate(90deg); /* Gira a seta para apontar para baixo no celular! */
+  margin: 10px 0 10px 8px;
 }
 
-.btn-iniciar-jornada {
-  background-color: #FFCC00;
-  color: #020611;
-  font-family: 'Rajdhani', sans-serif;
-  font-size: 1.2rem;
-  font-weight: 700;
-  padding: 15px 40px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  box-shadow: 0 0 15px rgba(255, 204, 0, 0.4);
-  transition: all 0.3s ease;
-}
+/* =========================================
+   3. LAYOUT DESKTOP (Idêntico ao seu original)
+========================================= */
+@media (min-width: 1024px) {
+  .insc_titulo h1 {
+    font-size: 2.8rem; /* Restaura o tamanho da fonte */
+    letter-spacing: 4px;
+  }
 
-.btn-iniciar-jornada:hover {
-  background-color: #ffd633;
-  box-shadow: 0 0 25px rgba(255, 204, 0, 0.8);
-  transform: translateY(-2px);
+  #trilha-secao {
+    padding: 50px; /* Restaura o preenchimento da caixa */
+    gap: 50px;
+  }
+
+  .btn-iniciar-jornada {
+    width: auto; /* Deixa o botão no tamanho natural dele */
+  }
+
+  /* Devolve o visual Horizontal no PC */
+  .trilha-passos {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start; /* Alinha tudo pelo topo */
+    gap: 15px;
+    max-width: none;
+  }
+
+  .passo {
+    flex: 1; /* Divide o espaço igualmente entre os passos */
+    width: auto;
+  }
+
+  .seta-fluxo {
+    transform: rotate(0deg); /* Desfaz a rotação, volta a apontar para direita */
+    margin-top: 2px; /* Alinha a seta com o círculo amarelo */
+    margin-right: 30px;
+    margin-left: 0;
+  }
 }
