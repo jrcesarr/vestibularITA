@@ -393,11 +393,11 @@
 
   .logo-ita {
     position: absolute; 
-    top: 30px;          
+    top: 50px;          
     left: 50%;       
     transform: translateX(-50%); 
   
-    width: 220px;       
+    width: 300px;       
     max-width: 25%;     
     height: auto;
     z-index: 10;        
@@ -405,7 +405,7 @@
 
   .img-casimiro {
     max-width: 140%;
-    max-height: 85vh; 
+    max-height: 100vh; 
     height: auto;
     width: auto;
     object-fit: contain;
