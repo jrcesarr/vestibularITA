@@ -172,49 +172,39 @@
     color: #020611;
 }
 
-/* Modal ao clicar */
+/* Botão programa de materias */
 
-/* Fundo escurecido atrás do modal */
-.modal_overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.85);
-    backdrop-filter: blur(5px); /* Efeito de vidro desfocado */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-    animation: fadeIn 0.3s ease;
-}
-
-/* Caixa do conteúdo */
-.modal_conteudo {
-    background-color: #020611;
-    border: 2px solid #FFCC00;
-    width: 80%;
-    max-width: 800px;
-    max-height: 80vh;
-    padding: 40px;
-    position: relative;
-    color: white;
-    overflow-y: auto; /* Scroll caso o texto seja longo */
-}
-
-.btn_fechar {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    background: none;
-    border: none;
-    color: #FFCC00;
-    font-size: 1.5rem;
+#btn-programa {
+    /* Posicionamento e Tamanho */
+    display: block;
+    margin: 60px auto 20px; /* Dá um espaço das matérias e centraliza */
+    padding: 18px 60px;
+    
+    /* Cores e Fundo */
+    background-color: #020611; /* O fundo escuro do seu tema */
+    color: #FFCC00;            /* Texto amarelo */
+    border: 2px solid #FFCC00; /* Borda um pouco mais grossa */
+    
+    /* Tipografia (Estilo de Terminal) */
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 800;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    
+    /* Efeitos */
     cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 0 15px rgba(255, 204, 0, 0.1); /* Brilho sutil inicial */
+    position: relative;
+    overflow: hidden;
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+/* Efeito ao passar o mouse */
+#btn-programa:hover {
+    background-color: #FFCC00;
+    color: #020611;
+    transform: translateY(-5px); /* Dá aquele "pulo" igual aos cards */
+    box-shadow: 0 10px 30px rgba(255, 204, 0, 0.4); /* O brilho aumenta */
 }
+

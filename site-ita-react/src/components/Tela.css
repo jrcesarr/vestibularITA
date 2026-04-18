@@ -1,0 +1,153 @@
+
+.hud-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(2, 6, 17, 0.85); 
+    backdrop-filter: blur(8px); /* Efeito vidro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+/* CAIXA PRINCIPAL DO PAINEL */
+.hud-panel {
+    width: 90%;
+    max-width: 800px;
+    background-color: #020611;
+    border: 2px solid #FFCC00;
+    box-shadow: 0 0 30px rgba(255, 204, 0, 0.2), inset 0 0 20px rgba(255, 204, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    /* Animação de ligar a tela do computador */
+    animation: bootUp 0.5s cubic-bezier(0.1, 0.9, 0.2, 1) forwards;
+}
+
+/* CABEÇALHO AMARELO */
+.hud-header {
+    background-color: #FFCC00;
+    color: #020611;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.hud-title-box { display: flex; align-items: center; gap: 10px; }
+.hud-title-box h3 { margin: 0; font-size: 1.2rem; }
+
+.blinking-dot {
+    width: 10px;
+    height: 10px;
+    background-color: #020611;
+    border-radius: 50%;
+    animation: blink 1s infinite;
+}
+
+.hud-close-btn {
+    background: transparent;
+    border: none;
+    color: #020611;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 800;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.2s;
+}
+
+.hud-close-btn:hover {
+    color: white;
+    background: #020611;
+    padding: 2px 8px;
+}
+
+/* ÁREA DA TELA DO TERMINAL */
+.hud-screen {
+    position: relative;
+    padding: 40px;
+    background-color: #010308;
+    color: #FFCC00;
+    font-family: 'Courier New', Courier, monospace; 
+    min-height: 300px;
+    overflow: hidden;
+}
+
+
+.scanlines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0),
+        rgba(255, 255, 255, 0) 50%,
+        rgba(0, 0, 0, 0.2) 50%,
+        rgba(0, 0, 0, 0.2)
+    );
+    background-size: 100% 4px;
+    pointer-events: none; 
+    z-index: 1;
+}
+
+.hud-content { position: relative; z-index: 2; }
+
+.sys-msg {
+    color: rgba(255, 204, 0, 0.6);
+    margin: 0 0 5px 0;
+    font-size: 0.9rem;
+}
+
+.hud-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 30px;
+}
+
+.hud-list li {
+    padding: 15px 0;
+    border-bottom: 1px dashed rgba(255, 204, 0, 0.3);
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-transform: uppercase;
+    transition: all 0.2s;
+}
+
+.hud-list li:hover {
+    background: rgba(255, 204, 0, 0.1);
+    padding-left: 15px;
+    border-bottom: 1px solid #FFCC00;
+}
+
+.hud-index { color: white; font-weight: bold; }
+
+/* RODAPÉ */
+.hud-footer {
+    padding: 10px 20px;
+    border-top: 1px solid rgba(255, 204, 0, 0.3);
+    display: flex;
+    justify-content: space-between;
+    color: rgba(255, 204, 0, 0.5);
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+}
+
+.hud-barcode { font-family: monospace; letter-spacing: 1px; font-weight: bold; }
+
+@keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+
+@keyframes bootUp {
+    0% { transform: scaleY(0.01) scaleX(0); opacity: 0; }
+    50% { transform: scaleY(0.01) scaleX(1); opacity: 1; }
+    100% { transform: scaleY(1) scaleX(1); }
+}
