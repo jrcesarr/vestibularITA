@@ -1,8 +1,8 @@
 import './Apresentacao.css'; 
 import fotoCasimiro from './Imagens/Casimiro.png';
 import logoITA from './Imagens/LogoITA.png';
-import imagemTerra from './imagens/Terra.png';
-import foguete from './imagens/Foguete.png';
+import imagemTerra from './Imagens/Terra.png';
+import foguete from './Imagens/Foguete.png';
 
 
  function RolagemInscricao() {
