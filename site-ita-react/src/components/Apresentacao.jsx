@@ -84,7 +84,7 @@ function Apresentacao() {
               <a href="#provas" className="item-menu">Provas Anteriores</a>
               <RolagemMaterias/>
               <a href="#calendario" className="item-menu">Calendário</a>
-              <a href="#editais" className="item-menu">Editais</a>
+              <a href="#editais" className="item-menu" onClick={() => window.open("https://www.vestibular.ita.br/instrucoes/edital_2026_retificado.pdf", "_blank")}>Edital</a>
             </nav>
           </div>
         </div>
