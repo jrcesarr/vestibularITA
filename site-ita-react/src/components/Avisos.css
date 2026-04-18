@@ -1,0 +1,136 @@
+.avisos-container {
+    position: relative;
+    width: 100%;
+    min-height: 100vh; 
+    background-color: #020611; 
+    overflow: hidden; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+}
+
+
+.estrelas-animadas-avisos {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%; 
+    background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
+    animation: moverEstrelas 100s linear infinite;
+    z-index: 1; 
+    opacity: 1;
+    filter: brightness(2.5) contrast(1.5);
+}
+
+.aviao-decorativo {
+    position: absolute;
+    width: 150px;
+    opacity: 1; 
+    z-index: 2;
+}
+
+.aviao-esquerdo {
+    top: 20%;
+    left: 10%;
+    animation: flutuarAviaoEsquerdo 12s ease-in-out infinite;
+}
+
+.aviao-direito {
+    bottom: 20%;
+    right: 10%;
+    animation: flutuarAviaoDireito 12s ease-in-out infinite reverse;
+}
+
+@keyframes flutuarAviaoEsquerdo {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-30px) rotate(0deg); }
+}
+
+@keyframes flutuarAviaoDireito {
+    0%, 100% { transform: translateY(0) scaleX(-1); }
+    50% { transform: translateY(-30px) scaleX(-1); }
+}
+
+.painel-avisos {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    max-width: 800px;
+    background: rgba(2, 6, 17, 0.85); 
+    border: 1px solid #FFCC00;
+    border-radius: 4px;
+    padding: 40px;
+    box-shadow: 0 0 30px rgba(255, 204, 0, 0.1);
+    backdrop-filter: blur(5px); 
+}
+
+.painel-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid rgba(255, 204, 0, 0.3);
+    padding-bottom: 15px;
+}
+
+.painel-header h2 {
+    color: #FFCC00;
+    font-family: 'Orbitron', sans-serif; 
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+}
+
+.lista-avisos {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.aviso-item {
+    display: flex;
+    gap: 20px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.03);
+    border-left: 3px solid #FFCC00;
+    transition: all 0.3s ease;
+}
+
+.aviso-item:hover {
+    background: rgba(255, 204, 0, 0.08);
+    transform: translateX(10px);
+}
+
+.aviso-data {
+    color: #FFCC00;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    min-width: 110px;
+}
+
+.aviso-conteudo h4 {
+    color: #fff;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.aviso-conteudo p {
+    color: #A0AABF;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 600px) {
+    .aviso-item {
+        flex-direction: column;
+        gap: 5px;
+    }
+    .aviao-decorativo {
+        display: none;
+    }
+}

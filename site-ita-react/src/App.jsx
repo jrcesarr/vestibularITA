@@ -2,6 +2,7 @@ import Apresentacao from './components/Apresentacao';
 import Inscricao from './components/Inscricao';
 import Materias from './components/Materias';
 import Galeria from './components/Galeria';
+import Avisos from './components/Avisos';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Inscricao />
       <Materias />  
       <Galeria />
+      <Avisos />
     </div>
   );
 }
