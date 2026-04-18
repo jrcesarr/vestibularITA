@@ -17,12 +17,12 @@
 .hud-panel {
     width: 90%;
     max-width: 800px;
+    max-height: 90vh; 
     background-color: #020611;
     border: 2px solid #FFCC00;
     box-shadow: 0 0 30px rgba(255, 204, 0, 0.2), inset 0 0 20px rgba(255, 204, 0, 0.1);
     display: flex;
     flex-direction: column;
-    /* Animação de ligar a tela do computador */
     animation: bootUp 0.5s cubic-bezier(0.1, 0.9, 0.2, 1) forwards;
 }
 
@@ -75,7 +75,8 @@
     color: #FFCC00;
     font-family: 'Courier New', Courier, monospace; 
     min-height: 300px;
-    overflow: hidden;
+    overflow-y: auto; 
+    overflow-x: hidden;
 }
 
 
