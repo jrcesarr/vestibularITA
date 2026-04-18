@@ -1,6 +1,7 @@
 import React from 'react';
 import './Avisos.css';
 import aviaoEsquerda from './Imagens/aviao-esq.png';
+import ITAJR from './Imagens/ITAJR.jpg';
 
 export default function Avisos() {
     const listaAvisos = [
@@ -47,6 +48,12 @@ export default function Avisos() {
                     ))}
                 </div>
             </div>
+
+            <img 
+                src={ITAJR}
+                alt="Logo ITA Junior" 
+                className="logo-JR" 
+            />
         </section>
     );
 }

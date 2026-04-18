@@ -9,7 +9,7 @@ export default function Tela({ modalType, onClose }) {
             titulo: "QUÍMICA 🧪",
             topicos: [
             "Teoria Atômica: Modelos, Radioatividade e Partículas",
-            "Ligações Químicas: Geometria, Polaridade e Forças Intermoleculares",
+            "Ligações Químicas: Geometria, Polaridade e Interações",
             "Estequiometria: Leis dos Gases, Mol e Cálculos de Reação",
             "Termoquímica, Cinética e Equilíbrio Químico",
             "Eletroquímica: Pilhas, Potenciais e Eletrólise",
