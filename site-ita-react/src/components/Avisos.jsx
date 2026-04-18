@@ -11,7 +11,7 @@ export default function Avisos() {
     ];
 
     return (
-        <section className="avisos-container">
+        <section id="avisos-container" className="avisos-container">
             <div className="estrelas-animadas-avisos"></div>
 
             {/* Aviões Decorativos  */}

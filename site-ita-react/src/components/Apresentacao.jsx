@@ -29,6 +29,18 @@ function RolagemMaterias() {
   return (<a href="#materias" onClick={rolarMaterias} className="item-menu">Programa de Matérias</a>)
 }
 
+function RolagemAvisos() {
+  const rolarAvisos = (e) => {
+    const secao = document.getElementById('avisos-container');
+    e.preventDefault();
+    if(secao) {
+      secao.scrollIntoView({behavior: 'smooth'});
+    }
+  };
+
+  return (<a href="#avisos" onClick={rolarAvisos} className="item-menu">Avisos</a>)
+}
+
 function Apresentacao() {
   return (
     <section className="hero-container">
@@ -83,7 +95,7 @@ function Apresentacao() {
             <nav className="menu-missao">
               <a href="#provas" className="item-menu" onClick={() => window.open("https://www.vestibular.ita.br/provas.htm", "_blank")}>Provas Anteriores</a>
               <RolagemMaterias/>
-              <a href="#calendario" className="item-menu">Calendário</a>
+              <RolagemAvisos/>
               <a href="#editais" className="item-menu" onClick={() => window.open("https://www.vestibular.ita.br/instrucoes/edital_2026_retificado.pdf", "_blank")}>Edital</a>
             </nav>
           </div>

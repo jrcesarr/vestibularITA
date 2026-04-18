@@ -1,6 +1,3 @@
-/* src/index.css */
-
-/* O asterisco significa "aplique em TODOS os elementos do site" */
 * {
   margin: 0;
   padding: 0;
@@ -8,13 +5,10 @@
 }
 
 body {
-  /* Isso garante que a página não crie barras de rolagem horizontais */
   overflow-x: hidden; 
-  /* Uma fonte base mais elegante e sem serifa */
   font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 }
 
-/* O Vite coloca todo o nosso site dentro de uma div chamada "root" */
 #root {
   width: 100%;
   min-height: 100vh;
