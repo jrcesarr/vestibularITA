@@ -156,3 +156,38 @@
         padding: 30px 20px;
     }
 }
+
+@media (max-width: 768px) {
+    /* 1. Ajuste do Título para não vazar da caixa */
+    .painel-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+        padding-bottom: 10px;
+    }
+    
+    .painel-header h2 {
+        font-size: 1.3rem; /* Diminui o título */
+        line-height: 1.4;
+    }
+
+    /* 2. Empilha a data e o aviso para ganhar espaço lateral */
+    .aviso-item {
+        flex-direction: column; 
+        gap: 5px;
+        padding: 15px 10px;
+    }
+
+    /* 3. Ajuste da Logo e do espaço no fundo */
+    .avisos-container {
+        padding-bottom: 150px; /* Cria um "chão" falso para o painel não bater na logo */
+        align-items: flex-start; /* Joga o painel um pouco mais pra cima */
+    }
+
+    .logo-JR {
+        bottom: 30px;
+        right: 50%; /* Joga pro meio */
+        transform: translateX(50%); /* Centraliza  */
+        width: 100px; /* Diminui um pouquinho a logo */
+    }
+}
