@@ -192,6 +192,5 @@
         height: 80px;           
         border-radius: 50%;      
         object-fit: cover;      
-        box-shadow: 0 0 15px rgba(255, 204, 0, 0.3);
     }
 }
