@@ -445,73 +445,99 @@
 }
 
 /* =========================================
-   AJUSTES PARA TABLET (iPad e similares)
+   OTIMIZAÇÃO PARA TABLETS (iPad e similares)
+   Target: Telas entre 768px e 1100px
 ========================================= */
-@media (max-width: 1024px) {
-    /* 1. Faz o conteúdo empilhar verticalmente como no mobile, 
-          mas com larguras maiores para não ficar 'magro' */
-    .conteudo-hero {
-        flex-direction: column;
-        text-align: center;
-        gap: 40px;
-        padding-top: 120px; /* Dá espaço para os elementos do topo */
-    }
+@media (max-width: 1100px) and (min-width: 768px) {
+  
+  /* 1. Escondemos a coluna do foguete para sobrar espaço */
+  .coluna-esq {
+    display: none;
+  }
 
-    /* 2. Aumenta o texto para ocupar a tela do tablet */
-    .hero-texto h1 {
-        font-size: 3.5rem; /* Um pouco menor que o PC, mas maior que o celular */
-        line-height: 1.1;
-    }
+  .hero-container {
+    flex-direction: row; /* Mantemos lado a lado, mas agora com apenas 2 colunas */
+    justify-content: space-around;
+    align-items: flex-end;
+    padding: 0 5%;
+  }
 
-    .hero-texto h2 {
-        font-size: 1.8rem;
-        margin: 20px auto;
-        max-width: 80%;
-    }
+  /* 2. Aumentamos a coluna do Casimiro */
+  .coluna-meio {
+    flex: 1;
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+  }
 
-    /* 3. Ajusta a imagem para não ficar pequena */
-    .imagem-container {
-        width: 80%; /* Ocupa a maior parte da largura no tablet */
-        max-width: 500px;
-        margin: 0 auto;
-    }
+  .img-casimiro {
+    max-width: 100%;
+    max-height: 75vh; /* Aumenta a altura dele no tablet */
+    object-fit: contain;
+  }
 
-    .imagem-astronauta {
-        width: 100%;
-        height: auto;
-    }
+  /* 3. Aumentamos o Painel do Vestibular */
+  .coluna-dir {
+    flex: 1;
+    max-width: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 10vh; /* Levanta um pouco o painel */
+  }
 
-    /* 4. Reposiciona os elementos do HUD para as bordas */
-    .hud-topo, .hud-baixo {
-        width: 90%;
-        left: 5%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
+  .painel-vestibular {
+    width: 100%;
+    padding: 40px 30px; /* Mais preenchimento interno */
+    background: rgba(2, 6, 17, 0.9); /* Um pouco mais opaco para ler melhor */
+    border: 2px solid rgba(255, 204, 0, 0.5);
+  }
 
-    /* No tablet, escondemos alguns stats se ficar muito poluído, 
-       ou apenas aumentamos a fonte */
-    .stats-item h4 {
-        font-size: 1.2rem;
-    }
+  .titulo-vestibular {
+    font-size: 2.2rem; /* Título maior no tablet */
+    margin-bottom: 30px;
+  }
 
-    /* 5. Aumenta a caixa de digitação (HUD) */
-    .caixa-hud {
-        width: 100%;
-        max-width: 450px;
-        margin: 0 auto;
-        height: 80px;
-    }
+  /* Ajuste da Legenda do Casimiro no Tablet */
+  .caixa-hud {
+    width: 280px;
+    height: 70px;
+  }
+  
+  .caixa-hud p {
+    font-size: 0.9rem; /* Texto da legenda mais legível */
+  }
 }
 
-/* Ajuste fino para tablets em modo Retrato (mais estreitos) */
-@media (max-width: 768px) {
-    .hero-texto h1 {
-        font-size: 2.8rem;
-    }
-    
-    .stats-item:nth-child(2) {
-        display: none; /* Esconde o item do meio se a tela for muito estreita */
-    }
+/* Ajuste extra: Se o tablet estiver em pé (Portrait), 
+   empilhamos para não ficar nada espremido */
+@media (max-width: 900px) {
+  .hero-container {
+    flex-direction: column;
+    overflow-y: auto;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 80px;
+  }
+
+  .coluna-meio, .coluna-dir {
+    max-width: 90%;
+    width: 100%;
+    flex: none;
+  }
+
+  .coluna-dir {
+    order: 1; /* Painel vem primeiro */
+    margin-bottom: 50px;
+  }
+
+  .coluna-meio {
+    order: 2; /* Casimiro embaixo */
+  }
+  
+  .img-casimiro {
+    max-height: 50vh;
+  }
 }
